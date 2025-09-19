@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel_Blog</title>
+  <style>
+    :root{
+      --text: #0f172a;
+      --muted: #444;
+      --accent-1:#ef4444;
+      --accent-2:#10b981;
+      --accent-3:#3b82f6;
+      --accent-4:#f59e0b;
+      --border:#ccc;
+    }
+    html{ scroll-behavior: smooth; }
+    body{ font-family: system-ui, sans-serif; margin:0; background:none; color:var(--text);}  
+    .tiles{ display:grid; grid-template-columns:repeat(4,minmax(110px,1fr)); gap:1rem; max-width:900px; margin:2rem auto; }
+    .tile{ display:grid; place-items:center; aspect-ratio:1/1; border-radius:1rem; font-weight:bold; font-size:2rem; color:white; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,.15); transition: transform .18s ease; }
+    .tile:hover{ transform: translateY(-3px); }
+    .tile-1{background:var(--accent-1);} .tile-2{background:var(--accent-2);} .tile-3{background:var(--accent-3);} .tile-4{background:var(--accent-4);}    
+    .destinations{ max-width:900px; margin:2rem auto; padding:1rem; background:#fff; border:1px solid var(--border); border-radius:1rem; }
+    .destination-block{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:2rem; gap:1rem; }
+    .destination-text{ flex:1; }
+    .destination-image{ width:200px; border-radius:.5rem; object-fit:cover; border:1px solid var(--border); }
+    h2{ margin-top:1.5rem; }
+    ol{ margin:0 0 1rem 1.2rem; }
+    ul{ margin:0 0 1rem 2rem; list-style:lower-alpha; }
+  </style>
+</head>
+<body>
+  <header><h1 style="text-align:center;">Travel_Blog</h1></header>
+  <nav class="tiles">
+    <a class="tile tile-1" href="#dest1" aria-label="Go to Destination 1: Europe">1</a>
+    <a class="tile tile-2" href="#dest2" aria-label="Go to Destination 2: Asia">2</a>
+    <a class="tile tile-3" href="#dest3" aria-label="Go to Destination 3: America">3</a>
+    <a class="tile tile-4" href="#dest4" aria-label="Go to Destination 4: Africa">4</a>
+  </nav>
+
+  <div class="destinations">
+    <div class="destination-block" id="dest1">
+      <div class="destination-text">
+        <h2>Destination 1: Europe</h2>
+        <ol>
+          <li>France<ul><li>Paris</li><li>Nice</li><li>Marseille</li></ul></li>
+          <li>Italy<ul><li>Rome</li><li>Florance</li><li>Venice</li></ul></li>
+          <li>Greece<ul><li>Athens</li><li>Thessaloniki</li><li>Santorini</li></ul></li>
+        </ol>
+      </div>
+      <img class="destination-image" src="images/europe.jpg" alt="Europe landscape" />
+    </div>
+
+    <div class="destination-block" id="dest2">
+      <div class="destination-text">
+        <h2>Destination 2: Asia</h2>
+        <ol>
+          <li>Japan<ul><li>Tokyo</li><li>Kyoto</li><li>Osaka</li></ul></li>
+          <li>China<ul><li>Beijing</li><li>Shanghai</li><li>Xi’an</li></ul></li>
+          <li>India<ul><li>New Delhi</li><li>Mumbai</li><li>Jaipur</li></ul></li>
+        </ol>
+      </div>
+      <img class="destination-image" src="images/asia.jpg" alt="Asia scenery" />
+    </div>
+
+    <div class="destination-block" id="dest3">
+      <div class="destination-text">
+        <h2>Destination 3: America</h2>
+        <ol>
+          <li>USA<ul><li>New York City</li><li>Los Angeles</li><li>Chicago</li></ul></li>
+          <li>Brazil<ul><li>Rio de Janeiro</li><li>Sao Paulo</li><li>Salvador</li></ul></li>
+          <li>Canada<ul><li>Toronto</li><li>Vancouver</li><li>Montreal</li></ul></li>
+        </ol>
+      </div>
+      <img class="destination-image" src="images/america.jpg" alt="America landmark" />
+    </div>
+
+    <div class="destination-block" id="dest4">
+      <div class="destination-text">
+        <h2>Destination 4: Africa</h2>
+        <ol>
+          <li>South Africa<ul><li>Cape Town</li><li>Johannesburg</li><li>Durban</li></ul></li>
+          <li>Egypt<ul><li>Cairo</li><li>Luxor</li><li>Sharm El Sheikh</li></ul></li>
+          <li>Morocco<ul><li>Marrakech</li><li>Casablanca</li><li>Fez</li></ul></li>
+        </ol>
+      </div>
+      <img class="destination-image" src="images/africa.jpg" alt="Africa safari" />
+    </div>
+  </div>
+</body>
+</html>
